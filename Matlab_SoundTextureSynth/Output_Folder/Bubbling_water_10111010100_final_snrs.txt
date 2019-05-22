@@ -1,0 +1,80 @@
+Bubbling_water_10111010100
+sub hist snr = 21.86; sub kurt snr = 4.31; sub ac snr = 12.04; env hist snr = 15.30
+env mean snr = 36.27; env var snr = 35.78; env skew snr = 31.91; env kurt snr = 22.56
+env C snr = 43.35; env C all snr = 17.92; mod power snr = 30.51; env ac snr = 7.56
+mod C1 snr = 14.86; mod C1 all snr = 8.72; mod C2 snr = 3.18
+
+SYNTHESIS PARAMETERS:
+P.constraint_set.sub_var  = 1
+P.constraint_set.sub_kurt = 0
+P.constraint_set.env_mean = 1
+P.constraint_set.env_var  = 1
+P.constraint_set.env_skew = 1
+P.constraint_set.env_kurt = 0
+P.constraint_set.env_C    = 1
+P.constraint_set.env_ac   = 0
+P.constraint_set.mod_pow  = 1
+P.constraint_set.mod_C1   = 0
+P.constraint_set.mod_C2   = 0
+
+desired_synth_dur = 45.00; length_ratio = 6.43; max_orig_dur = 7.00;
+measurement_windowing = 2 (1--> unwindowed, 2--> global window)
+imposition_windowing = 1 (1--> unwindowed, 2--> global window)
+win_steepness = 0.50
+imposition_method = 1 (1--> conj grad; 2--> gauss-newton)
+sub_imposition_order = 1
+
+avg_stat_option = 0 (1 = average stats across examples; 2 = take weighted average of stats for two sounds)
+
+Max number of iterations = 60
+SNR at which to halt imposition = 30 dB
+SNR at to flag synthesis as failed = 20 dB
+omit_converged_stats = 0; SNR at which to omit statistics from synthesis = 35 dB
+power threshold for including subbands in snr calculation = -30 dB
+incremental_imposition = 0; incr. imposition iteration limit = 20
+initial num line searches = 5; line search num option = 1
+
+audio_sr = 20000
+N_audio_channels = 30; low_audio_f = 20 Hz; hi_audio_f = 10000 Hz
+use_more_audio_filters = 0
+lin_or_log_filters = 1 (1--> log audio & mod; 2--> log audio, lin mod; 3--> lin audio, log mod; 4--> lin audio, lin mod)
+
+env_sr = 400
+N_mod_channels = 20; low_mod_f = 0.50 Hz; hi_mod_f = 200.00 Hz
+mod_filt_Q_value = 2
+use_more_mod_filters = 0
+low_mod_f_C12 = 1.00 Hz
+use_zp = 0 (0 means circular convolution; 1 means zeropadding for modulation filtering)
+
+compression option = 1; comp_exponent = 0.30; log_constant = 0.000
+desired_rms = 0.01
+
+match full envelope histograms = 0
+match full subband histograms = 0
+num histogram bins = 128
+manual envelope mean/variance adjustment = 0
+
+C_offsets_to_impose = [-21 -16 -11 -8 -5 -3 -2 -1 1 2 3 5 8 11 16 21 ]
+
+mod_C1_offsets_to_impose = [-2 -1 1 2 ]
+
+lags at which to measure env autocorr (samples) =
+     [1 2 3 4 5 6 7 9 11 14 18 22 28 36 45 57 73 92 116 148 187 237 301 ]
+
+num periods of subband cf over which to match sub ac = 5
+sub_ac_undo_win = 1
+sub_ac_win_choice = 2
+
+P.use_noise_stats.sub_var  = 0
+P.use_noise_stats.sub_kurt = 0
+P.use_noise_stats.env_mean = 0
+P.use_noise_stats.env_var  = 0
+P.use_noise_stats.env_skew = 0
+P.use_noise_stats.env_kurt = 0
+P.use_noise_stats.env_C    = 0
+P.use_noise_stats.env_ac   = 0
+P.use_noise_stats.mod_pow  = 0
+P.use_noise_stats.mod_C1   = 0
+P.use_noise_stats.mod_C2   = 0
+
+neg_env_skew = 0; neg_mod_C2 = 0
