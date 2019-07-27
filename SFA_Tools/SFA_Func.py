@@ -33,7 +33,7 @@ def scale_noise(vocalizations, noise, ratio):
     return noise * np.sqrt(initial_ratio/ratio)
 
 # Applies a gammatone transform with a given filter bank to a waveform
-def gamma_transform(data, filterbank):
+def gamma_transform(data, gfb):
     analysed = gfb.analyze(data)
     
     transformed = np.zeros((len(gfb.centerfrequencies),data.size))

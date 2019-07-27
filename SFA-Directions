@@ -1,0 +1,12 @@
+Generations w/ different timbre or pitch to see if it can pick up invariances
+Speaker identity testing
+
+1) Parabolas w/ comodulated noise (usually ~20 Hz modulations)
+2) Adding in clutter for noise -- [noise with random freq, # of freqs, duration, fm, am]
+3) Transformations [speed, loudness, pitch, timbre?, reverb, off axis changes]
+
+Maria Geffen (Journal Neurophysiology) - transformations?
+
+Do speed/loudness in different ways (continous trajectories, randomized values)
+
+Do we learn objects first or transformations?
